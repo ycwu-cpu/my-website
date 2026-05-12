@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>星典科技 | I-Star Technology</title>
+    <title>星典科技</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -36,99 +36,72 @@
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
         @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
-        
-        /* 隱藏滾動條但保留功能 (可選) */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #555; }
     </style>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17813380363"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17813380363');
-    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17813380363"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17813380363');
+</script>
 
 </head>
 <body class="font-sans text-slate-700 bg-slate-50">
 
-    <!-- 頁首 (Header) - 放置 I-Star Logo -->
-    <!-- 修改：背景改為白色 (bg-white)，邊框改為淺灰 (border-slate-200) -->
     <header class="bg-white border-b border-slate-200 relative z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-32 flex items-center justify-between md:justify-start">
-            <!-- 星典 Logo -->
             <a href="#home" onclick="scrollToSection(event, 'home')" class="flex items-center gap-5 hover:opacity-80 transition" title="回到首頁">
-                <!-- 修改：移除 bg-white rounded p-2，因為背景已是白色 -->
                 <img src="I-star-logo.png" 
                      onerror="this.src='https://placehold.co/100x40/ffffff/0a192f?text=I-Star'" 
                      alt="星典科技 Logo" 
                      class="h-24 object-contain">
-                <!-- 修改：文字顏色改為深色 (text-brand-dark) -->
                 <div class="flex flex-col text-brand-dark">
                     <span class="font-bold text-3xl tracking-wide leading-none mb-1">星典科技</span>
-                    <!-- 修改：副標文字顏色改為品牌藍 (text-brand-blue) 以利閱讀 -->
                     <span class="text-base text-brand-blue tracking-wider">I-Star Technology</span>
                 </div>
             </a>
         </div>
     </header>
 
-    <!-- 導覽列 (Navbar) - 放置 IBDTEC Logo 與連結 -->
     <nav class="sticky top-0 w-full bg-brand-dark/95 backdrop-blur-md shadow-lg z-40 text-white transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 md:h-20"> <!-- 調整高度 -->
+            <div class="flex justify-between items-center h-16 md:h-20">
                 
-                <!-- 左側：博頓 Logo 區域 -->
                 <div class="flex items-center gap-4">
-                    
-                    <!-- 博頓 Logo -->
                     <a href="https://www.ibdtec.cn/" target="_blank" class="flex flex-col items-center hover:opacity-80 transition" title="前往博頓光電原廠官網">
                         <img src="ibdtec-logo.png" 
                              onerror="this.src='https://placehold.co/100x40/ffffff/0044cc?text=IBDTEC'" 
                              alt="博頓光電 Logo" 
-                             class="h-10 md:h-12 border-2 border-white rounded p-1 object-contain"> <!-- 稍微調整高度以適應新的導覽列 -->
-                    </a>
-
-                    <!-- 三束 Logo (新增) -->
-                    <a href="http://www.3beamcoating.net.cn/" target="_blank" class="flex flex-col items-center hover:opacity-80 transition" title="前往三束鍍膜官網">
-                        <img src="3beam-logo.png" 
-                             onerror="this.src='https://placehold.co/100x40/ffffff/0044cc?text=3-BEAM'" 
-                             alt="三束鍍膜 Logo" 
                              class="h-10 md:h-12 border-2 border-white rounded p-1 object-contain">
                     </a>
 
-                    <!-- 文字標示 -->
                     <div class="flex flex-col justify-center">
                         <span class="text-xs font-bold tracking-wider text-brand-accent">台灣總代理</span>
-                        <!-- 修改：將原本註解掉的文字恢復，並設定為星典科技 I-Star Technology -->
                         <span class="text-[10px] text-slate-300">星典科技 I-Star Technology</span>
                     </div>
                 </div>
 
-                <!-- 右側：選單連結 -->
                 <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide items-center">
                     <a href="#home" onclick="scrollToSection(event, 'home')" class="hover:text-brand-accent transition">首頁</a>
+                    <a href="#news" onclick="scrollToSection(event, 'news')" class="hover:text-brand-accent transition">最新動態</a>
                     <a href="#technology" onclick="scrollToSection(event, 'technology')" class="hover:text-brand-accent transition">核心技術</a>
                     <a href="#products" onclick="scrollToSection(event, 'products')" class="hover:text-brand-accent transition">產品與裝備</a>
                     <a href="#solutions" onclick="scrollToSection(event, 'solutions')" class="hover:text-brand-accent transition">解決方案</a>
                     <a href="#contact" onclick="scrollToSection(event, 'contact')" class="px-4 py-2 bg-brand-blue hover:bg-blue-600 rounded transition shadow-lg shadow-blue-900/50">聯絡我們</a>
                 </div>
 
-                <!-- 手機選單按鈕 -->
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-white hover:text-brand-accent"><i class="fas fa-bars text-2xl"></i></button>
                 </div>
             </div>
         </div>
         
-        <!-- 手機版選單 -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-slate-700 absolute w-full shadow-xl">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#home" onclick="scrollToSection(event, 'home')" class="block px-3 py-3 hover:bg-slate-800 rounded border-b border-slate-800">首頁</a>
+                <a href="#news" onclick="scrollToSection(event, 'news')" class="block px-3 py-3 hover:bg-slate-800 rounded border-b border-slate-800">最新動態</a>
                 <a href="#technology" onclick="scrollToSection(event, 'technology')" class="block px-3 py-3 hover:bg-slate-800 rounded border-b border-slate-800">核心技術</a>
                 <a href="#products" onclick="scrollToSection(event, 'products')" class="block px-3 py-3 hover:bg-slate-800 rounded border-b border-slate-800">產品與裝備</a>
                 <a href="#solutions" onclick="scrollToSection(event, 'solutions')" class="block px-3 py-3 hover:bg-slate-800 rounded border-b border-slate-800">解決方案</a>
@@ -137,19 +110,115 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden bg-brand-dark text-white">
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark text-white py-20 md:py-24">
         <div class="absolute inset-0 bg-tech-pattern bg-cover bg-center opacity-40"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/60 to-brand-dark"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
-            <div class="mb-6 inline-block px-4 py-1 border border-brand-accent/50 rounded-full bg-brand-accent/10 text-brand-accent text-sm font-semibold tracking-wider slide-up">
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center w-full mt-4 md:mt-10">
+            
+            <div id="news" class="w-full max-w-5xl mx-auto mb-16 slide-up">
+                <div class="relative w-full rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(0,170,255,0.15)] bg-white text-left group">
+                    <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out h-full">
+                        
+                        <div class="w-full flex-shrink-0 flex flex-col md:flex-row h-full">
+                            <div class="md:w-1/2 h-56 md:h-80 relative bg-slate-100 flex items-center justify-center">
+                                <img src="opie-1550.jpg" onerror="this.src='https://placehold.co/800x600/e2e8f0/1e293b?text=開陽OPIE-1550'" alt="開陽 OPIE-1550" class="w-full h-full object-contain md:object-cover p-4 md:p-0 transform scale-90">
+                            </div>
+                            <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+                                <div class="inline-block px-3 py-1 bg-red-100 text-red-600 text-xs font-bold rounded-full mb-3 md:mb-4 w-max">最新產品</div>
+                                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 md:mb-4">開陽 OPIE-1550 鍍膜機</h3>
+                                <p class="text-sm md:text-base text-slate-600 mb-5 md:mb-6 leading-relaxed">具備超高致密度與全自主光控系統，專為精密光學薄膜量產設計，為您帶來更高穩定性與效率的極致生產體驗。</p>
+                                <a href="opie-1550.pdf" target="_blank" class="inline-flex items-center text-brand-blue font-bold hover:text-blue-800 transition text-sm md:text-base">
+                                    點擊查看說明檔 <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="w-full flex-shrink-0 flex flex-col md:flex-row h-full">
+                            <div class="md:w-1/2 h-56 md:h-80 relative bg-slate-100 flex items-center justify-center">
+                                <img src="xputter.jpg" onerror="this.src='https://placehold.co/800x600/e2e8f0/1e293b?text=天璣XPUTTER'" alt="天璣 XPUTTER" class="w-full h-full object-contain md:object-cover p-4 md:p-0 transform scale-90">
+                            </div>
+                            <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+                                <div class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue text-xs font-bold rounded-full mb-3 md:mb-4 w-max">熱銷推薦</div>
+                                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 md:mb-4">天璣 XPUTTER IBS 系列</h3>
+                                <p class="text-sm md:text-base text-slate-600 mb-5 md:mb-6 leading-relaxed">近零損耗，半導體與高端光學首選設備。支持多種離子源，提供極致的薄膜質量與超平滑表面處理。</p>
+                                <a href="xputter.pdf" target="_blank" class="inline-flex items-center text-brand-blue font-bold hover:text-blue-800 transition text-sm md:text-base">
+                                    點擊查看說明檔 <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="w-full flex-shrink-0 flex flex-col md:flex-row h-full">
+                            <div class="md:w-1/2 h-56 md:h-80 relative bg-slate-100 flex items-center justify-center">
+                                <img src="riber.jpg" onerror="this.src='https://placehold.co/800x600/e2e8f0/1e293b?text=玉衡RIBER'" alt="技術突破" class="w-full h-full object-contain md:object-cover p-4 md:p-0 transform scale-90">
+                            </div>
+                            <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+                                <div class="inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full mb-3 md:mb-4 w-max">技術突破</div>
+                                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 md:mb-4">玉衡 RIBER IBE 蝕刻機</h3>
+                                <p class="text-sm md:text-base text-slate-600 mb-5 md:mb-6 leading-relaxed">奈米級高精度蝕刻與修形，解決高難度製程痛點。提供卓越的均勻性與精準控制，適用於複雜微納結構製造。</p>
+                                <a href="riber.pdf" target="_blank" class="inline-flex items-center text-brand-blue font-bold hover:text-blue-800 transition text-sm md:text-base">
+                                    點擊查看說明檔 <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 輪播項目 4 -->
+                        <div class="w-full flex-shrink-0 flex flex-col md:flex-row h-full">
+                            <div class="md:w-1/2 h-56 md:h-80 relative bg-slate-100 flex items-center justify-center">
+                                <img src="IBD-RISE1500-RFC-L1100-E.jpg" onerror="this.src='https://placehold.co/800x600/e2e8f0/1e293b?text=技術突破'" alt="技術突破" class="w-full h-full object-contain p-4 transform scale-50">
+                            </div>
+                            <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+                                <div class="inline-block px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full mb-3 md:mb-4 w-max">技術突破</div>
+                                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 md:mb-4">1100mm矩形射頻離子源隆重上市</h3>
+                                <p class="text-sm md:text-base text-slate-600 mb-5 md:mb-6 leading-relaxed">應用於中大型基材：離子束清洗、離子束輔助薄膜沉積、離子束濺射薄膜沉積、離子束刻蝕。</p>
+                                <a href="L1100【矩形射频离子源】产品规格书.pdf" target="_blank" class="inline-flex items-center text-brand-blue font-bold hover:text-blue-800 transition text-sm md:text-base">
+                                    點擊查看說明檔 <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 輪播項目 5 -->
+                        <div class="w-full flex-shrink-0 flex flex-col md:flex-row h-full">
+                            <div class="md:w-1/2 h-56 md:h-80 relative bg-slate-100 flex items-center justify-center">
+                                <img src="紫外IAD设备工艺数据.jpg" onerror="this.src='https://placehold.co/800x600/e2e8f0/1e293b?text=高階應用'" alt="高階應用" class="w-full h-full object-contain md:object-cover p-4 md:p-0">
+                            </div>
+                            <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+                                <div class="inline-block px-3 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded-full mb-3 md:mb-4 w-max">高階應用</div>
+                                <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-3 md:mb-4">紫外紅外高階光學鍍膜</h3>
+                                <p class="text-sm md:text-base text-slate-600 mb-5 md:mb-6 leading-relaxed">博頓雙離子束輔助鍍膜，成就紫外紅外精密光學核心品質</p>
+                                <a href="紫外紅外IAD设备工艺数据.pdf" target="_blank" class="inline-flex items-center text-brand-blue font-bold hover:text-blue-800 transition text-sm md:text-base">
+                                    點擊查看說明檔 <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button id="prev-slide" class="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/90 hover:bg-white text-brand-dark rounded-full shadow-lg flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition z-10 border border-slate-100">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="next-slide" class="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/90 hover:bg-white text-brand-dark rounded-full shadow-lg flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition z-10 border border-slate-100">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                        <button class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-brand-blue transition-all duration-300 slide-dot w-5 md:w-6" data-index="0"></button>
+                        <button class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-slate-300 hover:bg-brand-blue/50 transition-all duration-300 slide-dot" data-index="1"></button>
+                        <button class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-slate-300 hover:bg-brand-blue/50 transition-all duration-300 slide-dot" data-index="2"></button>
+                        <button class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-slate-300 hover:bg-brand-blue/50 transition-all duration-300 slide-dot" data-index="3"></button>
+                        <button class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-slate-300 hover:bg-brand-blue/50 transition-all duration-300 slide-dot" data-index="4"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6 inline-block px-4 py-1 border border-brand-accent/50 rounded-full bg-brand-accent/10 text-brand-accent text-sm font-semibold tracking-wider slide-up delay-100">
                 原子級精度 · 智慧控制 · 核心技術
             </div>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight slide-up delay-100">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight slide-up delay-200">
                 極致微奈製程<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-brand-accent">離子束精密製造技術引領者</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10 slide-up delay-200">
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10 slide-up delay-300">
                 專注於高階離子源及離子束裝備的研發與製造，以超高致密度、超低損耗、原子級表面處理技術，為精密光學、泛半導體及前沿科技提供卓越的微奈加工解決方案。
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 slide-up delay-300">
@@ -160,7 +229,6 @@
         </div>
     </section>
 
-    <!-- 核心技術 Brief -->
     <section id="technology" class="py-20 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -169,7 +237,6 @@
                 <p class="mt-4 text-slate-600">從離子源核心零組件到整機系統的垂直整合研發能力</p>
             </div>
             
-            <!-- 文字特點 -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
                 <div class="p-8 bg-slate-50 rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-slate-100">
                     <i class="fas fa-circle-notch text-5xl text-brand-blue mb-6"></i>
@@ -188,12 +255,9 @@
                 </div>
             </div>
 
-            <!-- 圖片展示區 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- 圖 1: 全系列離子源 -->
                 <div class="group relative rounded-2xl overflow-hidden shadow-lg border border-slate-100">
                     <div class="h-80 overflow-hidden bg-white flex items-center justify-center">
-                        <!-- 還原為本機路徑 -->
                         <img src="all-ion-sources.jpg.jpg" 
                              onerror="this.src='https://placehold.co/800x600/e2e8f0/1e293b?text=All+Ion+Sources'"
                              alt="博頓光電全系列離子源" 
@@ -205,10 +269,8 @@
                     </div>
                 </div>
 
-                <!-- 圖 2: 製程示意圖 -->
                 <div class="group relative rounded-2xl overflow-hidden shadow-lg border border-slate-100">
                     <div class="h-80 overflow-hidden bg-white flex items-center justify-center">
-                        <!-- 還原為本機路徑 -->
                         <img src="process-types.jpg" 
                              onerror="this.src='https://placehold.co/800x600/e2e8f0/1e293b?text=Process+Types'"
                              alt="蝕刻、濺鍍、輔助製程技術" 
@@ -224,11 +286,9 @@
         </div>
     </section>
 
-    <!-- Product Section -->
     <section id="products" class="py-24 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- 第一部分：核心零組件 (離子源) -->
             <div class="mb-20">
                 <div class="flex items-center mb-10">
                     <div class="w-1.5 h-8 bg-brand-accent mr-4"></div>
@@ -239,14 +299,11 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- 離子源 1 -->
-                    <!-- 還原為本機路徑: rf-source.pdf -->
                     <a href="rf-source.pdf" target="_blank" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition group relative border border-transparent hover:border-brand-blue/30 cursor-pointer">
                         <div class="absolute top-4 right-4 z-10 bg-red-600 text-white text-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition">
                             <i class="fas fa-file-pdf mr-1"></i> 下載規格書
                         </div>
                         <div class="h-80 overflow-hidden relative bg-white flex items-center justify-center">
-                            <!-- 還原為本機路徑 -->
                             <img src="rf-source.jpg" 
                                  onerror="this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=射頻離子源圖片'"
                                  alt="射頻離子源" 
@@ -263,14 +320,11 @@
                         </div>
                     </a>
 
-                    <!-- 離子源 2 -->
-                    <!-- 還原為本機路徑: hall-source.pdf -->
                     <a href="hall-source.pdf" target="_blank" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition group relative border border-transparent hover:border-brand-blue/30 cursor-pointer">
                         <div class="absolute top-4 right-4 z-10 bg-red-600 text-white text-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition">
                             <i class="fas fa-file-pdf mr-1"></i> 下載規格書
                         </div>
                         <div class="h-80 overflow-hidden relative bg-white flex items-center justify-center">
-                            <!-- 還原為本機路徑 -->
                             <img src="hall-source.jpg" 
                                  onerror="this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=霍爾離子源圖片'"
                                  alt="霍爾離子源" 
@@ -287,14 +341,11 @@
                         </div>
                     </a>
 
-                    <!-- 離子源 3 -->
-                    <!-- 還原為本機路徑: rectangular-source.pdf -->
                     <a href="rectangular-source.pdf" target="_blank" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition group relative border border-transparent hover:border-brand-blue/30 cursor-pointer">
                         <div class="absolute top-4 right-4 z-10 bg-red-600 text-white text-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition">
                             <i class="fas fa-file-pdf mr-1"></i> 下載規格書
                         </div>
                         <div class="h-80 overflow-hidden relative bg-white flex items-center justify-center">
-                            <!-- 還原為本機路徑 -->
                             <img src="rectangular-source.jpg" 
                                  onerror="this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=矩形離子源圖片'"
                                  alt="矩形離子源" 
@@ -313,7 +364,6 @@
                 </div>
             </div>
 
-            <!-- 第二部分：高階裝備 (整機) -->
             <div>
                 <div class="flex items-center mb-10">
                     <div class="w-1.5 h-8 bg-brand-blue mr-4"></div>
@@ -324,10 +374,8 @@
                 </div>
 
                 <div class="space-y-12">
-                    <!-- 裝備 1: IAD -->
                     <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl transition flex flex-col md:flex-row gap-8 items-center border border-transparent hover:border-brand-blue/20">
                         <div class="w-full md:w-1/2 h-72 rounded-xl overflow-hidden relative bg-white flex items-center justify-center">
-                            <!-- 還原為本機路徑 -->
                             <img src="opie-1550.jpg" 
                                  onerror="this.src='https://placehold.co/800x600/e2e8f0/1e293b?text=開陽OPIE-1550設備圖片'"
                                  alt="IAD鍍膜機" 
@@ -339,24 +387,20 @@
                             <p class="text-slate-600 mb-6 leading-relaxed">
                                 專為精密光學薄膜量產設計。配備雙離子源及全自主光控系統，膜層致密度高、牢固度強。為一高穩定、高精準、高效率之專業量產設備。
                             </p>
-
                             <ul class="grid grid-cols-2 gap-y-2 gap-x-4 text-sm text-slate-700 mb-6">
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>雙離子源+多面旋轉靶材</li>
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>即時線上監控 (IBD-OMS)</li>
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>高功率低損耗薄膜</li>
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>開放式製程設計</li>
                             </ul>
-                            <!-- 還原為本機路徑: opie-1550.pdf -->
                             <a href="opie-1550.pdf" target="_blank" class="inline-flex items-center px-6 py-2 border border-brand-dark text-brand-dark rounded hover:bg-brand-dark hover:text-white transition group">
                                 <i class="fas fa-file-pdf mr-2 text-red-600 group-hover:text-white"></i> 下載設備規格書 (PDF)
                             </a>
                         </div>
                     </div>
 
-                    <!-- 裝備 2: IBS -->
                     <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl transition flex flex-col md:flex-row-reverse gap-8 items-center border border-transparent hover:border-brand-blue/20">
                         <div class="w-full md:w-1/2 h-72 rounded-xl overflow-hidden relative bg-white flex items-center justify-center">
-                            <!-- 還原為本機路徑 -->
                             <img src="xputter.jpg" 
                                  onerror="this.src='https://placehold.co/800x600/e2e8f0/1e293b?text=天璣XPUTTER設備圖片'"
                                  alt="IBS鍍膜機" 
@@ -368,24 +412,20 @@
                             <p class="text-slate-600 mb-6 leading-relaxed">
                                 追求極致的超低損耗與超高致密性。適用於雷射陀螺、雷射晶片腔面等極端品質需求，是半導體、航太與高端光學的首選。
                             </p>
-
                             <ul class="grid grid-cols-2 gap-y-2 gap-x-4 text-sm text-slate-700 mb-6">
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>膜厚均勻性 < ±0.5%</li>
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>近零損耗 (Total Loss < 10ppm)</li>
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>表面粗糙度 < 0.2nm</li>
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>支持ECR/RF多種離子源</li>
                             </ul>
-                            <!-- 還原為本機路徑: xputter.pdf -->
                             <a href="xputter.pdf" target="_blank" class="inline-flex items-center px-6 py-2 border border-brand-dark text-brand-dark rounded hover:bg-brand-dark hover:text-white transition group">
                                 <i class="fas fa-file-pdf mr-2 text-red-600 group-hover:text-white"></i> 下載設備規格書 (PDF)
                             </a>
                         </div>
                     </div>
 
-                    <!-- 裝備 3: IBE -->
                     <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl transition flex flex-col md:flex-row gap-8 items-center border border-transparent hover:border-brand-blue/20">
                         <div class="w-full md:w-1/2 h-72 rounded-xl overflow-hidden relative bg-white flex items-center justify-center">
-                            <!-- 還原為本機路徑 -->
                             <img src="riber.jpg" 
                                  onerror="this.src='https://placehold.co/800x600/e2e8f0/1e293b?text=玉衡RIBER設備圖片'"
                                  alt="IBE蝕刻機" 
@@ -397,14 +437,12 @@
                             <p class="text-slate-600 mb-6 leading-relaxed">
                                 奈米級高精度蝕刻與修形。支持傾斜蝕刻、高深寬比加工及複雜微納結構製造（如斜光柵、光波導），解決高難度製程的痛點。
                             </p>
-
                             <ul class="grid grid-cols-2 gap-y-2 gap-x-4 text-sm text-slate-700 mb-6">
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>高準直性與高均勻性</li>
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>多自由度高精度工作台</li>
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>適用於斜光柵/微透鏡陣列</li>
                                 <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-2"></i>非接觸式原子級拋光</li>
                             </ul>
-                            <!-- 還原為本機路徑: riber.pdf -->
                             <a href="riber.pdf" target="_blank" class="inline-flex items-center px-6 py-2 border border-brand-dark text-brand-dark rounded hover:bg-brand-dark hover:text-white transition group">
                                 <i class="fas fa-file-pdf mr-2 text-red-600 group-hover:text-white"></i> 下載設備規格書 (PDF)
                             </a>
@@ -416,7 +454,6 @@
         </div>
     </section>
 
-    <!-- Solutions & Applications -->
     <section id="solutions" class="py-20 bg-brand-dark text-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-blue/10 skew-x-12 transform origin-top-right"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -449,7 +486,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-slate-50 rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
@@ -530,7 +566,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="mb-4 md:mb-0 text-center md:text-left">
@@ -566,18 +601,16 @@
 
         // 處理表單提交
         document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault(); // 阻止表單預設跳轉
+            e.preventDefault(); 
             
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerText;
             
-            // 鎖定按鈕避免重複提交
             submitBtn.disabled = true;
             submitBtn.innerText = '傳送中...';
 
             const formData = new FormData(this);
 
-            // 使用 FormSubmit 的 AJAX 接口發送
             fetch("https://formsubmit.co/ajax/d907520@gmail.com", {
                 method: "POST",
                 body: formData
@@ -585,20 +618,19 @@
             .then(response => response.json())
             .then(data => {
                 alert('感謝您的諮詢，星典科技業務代表將盡快與您聯繫！');
-                document.getElementById('contact-form').reset(); // 清空表單
+                document.getElementById('contact-form').reset(); 
             })
             .catch(error => {
                 alert('發送失敗，請檢查網路連線或稍後再試。');
                 console.error('Error:', error);
             })
             .finally(() => {
-                // 恢復按鈕狀態
                 submitBtn.disabled = false;
                 submitBtn.innerText = originalBtnText;
             });
         });
         
-        // Add scroll handling for nav links
+        // 平滑滾動與手機選單關閉邏輯
         function scrollToSection(event, sectionId) {
             event.preventDefault();
             const element = document.getElementById(sectionId);
@@ -612,7 +644,6 @@
                     behavior: "smooth"
                 });
                 
-                // Close mobile menu if open
                 if (window.innerWidth < 768) {
                     const menu = document.getElementById('mobile-menu');
                     if (!menu.classList.contains('hidden')) {
@@ -621,6 +652,80 @@
                     }
                 }
             }
+        }
+
+        // 最新動態 Carousel 輪播邏輯
+        const carouselInner = document.getElementById('carousel-inner');
+        const prevBtn = document.getElementById('prev-slide');
+        const nextBtn = document.getElementById('next-slide');
+        const dots = document.querySelectorAll('.slide-dot');
+        
+        if (carouselInner) {
+            const totalSlides = carouselInner.children.length;
+            let currentSlide = 0;
+            let autoPlayInterval;
+
+            function updateCarousel() {
+                carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // 更新圓點樣式
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.remove('bg-slate-300', 'w-2', 'h-2', 'md:w-2.5', 'md:h-2.5');
+                        dot.classList.add('bg-brand-blue', 'w-5', 'md:w-6', 'h-2', 'md:h-2.5');
+                    } else {
+                        dot.classList.remove('bg-brand-blue', 'w-5', 'md:w-6');
+                        dot.classList.add('bg-slate-300', 'w-2', 'h-2', 'md:w-2.5', 'md:h-2.5');
+                    }
+                });
+            }
+
+            function goToNextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            }
+
+            function goToPrevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(goToNextSlide, 5000); // 每 5 秒切換一次
+            }
+
+            function resetAutoPlay() {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+
+            // 綁定事件
+            nextBtn.addEventListener('click', () => {
+                goToNextSlide();
+                resetAutoPlay();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                goToPrevSlide();
+                resetAutoPlay();
+            });
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    currentSlide = parseInt(e.target.getAttribute('data-index'));
+                    updateCarousel();
+                    resetAutoPlay();
+                });
+            });
+
+            // 滑鼠懸停時暫停輪播，離開時恢復
+            carouselInner.parentElement.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+            carouselInner.parentElement.addEventListener('mouseleave', startAutoPlay);
+
+            // 初始化
+            startAutoPlay();
+            // 初始化第一次圓點樣式
+            updateCarousel();
         }
     </script>
 </body>
